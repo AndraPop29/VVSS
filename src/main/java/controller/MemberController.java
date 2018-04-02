@@ -12,8 +12,13 @@ public class MemberController {
 		this.memberRepository = memberRepository;
 	}
 
-	public void addMember(Member newMember) throws MemberAlreadyExistsException {
-		memberRepository.addMember(newMember);
+	public String addMember(Member newMember) {
+		try{
+			memberRepository.addMember(newMember);
+			return null;
+		}catch(Exception ex){
+			return ex.getMessage();
+		}
 	}
 
 }
