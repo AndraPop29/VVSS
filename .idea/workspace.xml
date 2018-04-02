@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f3d17fd-fe31-4032-b6da-5be72eb6ac0d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/MemberUI.java" afterPath="$PROJECT_DIR$/src/main/java/ui/MemberUI.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MemberControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/MemberControllerTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/MemberController.class" afterPath="$PROJECT_DIR$/target/classes/controller/MemberController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ui/MemberUI.class" afterPath="$PROJECT_DIR$/target/classes/ui/MemberUI.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MemberControllerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/MemberControllerTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +17,8 @@
       <file leaf-file-name="MemberControllerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/MemberControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            <state relative-caret-position="285">
+              <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -303,7 +293,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522692325803</updated>
-      <workItem from="1522692328700" duration="1230000" />
+      <workItem from="1522692328700" duration="1324000" />
     </task>
     <servers />
   </component>
@@ -313,7 +303,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1230000" />
+    <option name="totallyTimeSpent" value="1324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -386,8 +376,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MemberControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        <state relative-caret-position="285">
+          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
           <folding />
         </state>
       </provider>
