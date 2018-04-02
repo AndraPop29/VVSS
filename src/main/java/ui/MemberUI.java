@@ -49,8 +49,6 @@ public class MemberUI {
 					memberController.addMember(newMember);
 				} catch (NumberFormatException exception) {
 					System.out.println("Wrong id for member!");
-				} catch (MemberAlreadyExistsException e) {
-					System.out.println(e.getLocalizedMessage());
 				}
 
 			} else if (cmd.equals("2")) {
