@@ -21,7 +21,27 @@ public class MemberRepository {
 		readFromFile();
 	}
 
-	public void addMember(Member m) throws MemberAlreadyExistsException {
+	private String validateName(String name){
+		if  (name.length() >= 256) {
+			return "Name can not be longer than 256";
+		}
+
+		if(!name.equals("") && !name.equals(" ")){
+			for(int i=0;i<name.length();i++){
+				if((!Character.isUpperCase(name.charAt(i))) && (!Character.isLowerCase(name.charAt(i))) && (!Character.isSpaceChar(name.charAt(i)))){
+					return "Invalid character: " + name.charAt(i);
+				}
+			}
+			return null;
+		}else{
+			return "Name or address cannot be empty!";
+		}
+	}
+
+	public void addMember(Member m) throws Exception {
+		if(validateName(m.getName()) != null) {
+			throw new Exception("Invalid name");
+		}
 		if (checkIfExists(m.getId())) {
 			throw new MemberAlreadyExistsException();
 		} else {

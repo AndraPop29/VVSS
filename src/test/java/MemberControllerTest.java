@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import repository.MemberRepository;
 
+import java.util.Collections;
 import java.util.Random;
 
 public class MemberControllerTest {
@@ -17,7 +18,7 @@ public class MemberControllerTest {
         repo = new MemberRepository("membersF.txt");
         controller = new MemberController(repo);
         Random rnd = new Random();
-        id = 10;
+        id = rnd.nextInt(100) + 1;
     }
 
     @Test
@@ -45,5 +46,34 @@ public class MemberControllerTest {
         // Then
         Assert.assertNotNull(result);
     }
+
+    @Test
+    public void testAddMemberInvalidName() {
+        // Given
+        String name = "An4";
+
+        // When
+        String result = controller.addMember(new Member(name, id));
+
+        // Then
+        Assert.assertNotNull(result);
+    }
+
+    @Test
+    public void testAddMemberInvalidNameLength() {
+        String name = String.join("", Collections.nCopies(256, "a"));
+
+        String result = controller.addMember(new Member(name, id));
+
+        Assert.assertNotNull(result);
+    }
+
+    @Test
+    public void testAddMemberEmptyName() {
+        String name = "";
+
+        Assert.assertNotNull(controller.addMember(new Member(name, id)));
+    }
+
 
 }
