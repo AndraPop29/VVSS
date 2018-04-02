@@ -17,7 +17,7 @@ public class MemberControllerTest {
         repo = new MemberRepository("membersF.txt");
         controller = new MemberController(repo);
         Random rnd = new Random();
-        int id = rnd.nextInt(100) + 1;
+        id = 10;
     }
 
     @Test
@@ -31,6 +31,19 @@ public class MemberControllerTest {
 
         // Then
         Assert.assertNull(result);
+    }
+
+    @Test
+    public void testAddClientInvalidId() {
+        // Given
+        String name = "Ana";
+        int newId = 1;
+
+        // When
+        String result = controller.addMember(new Member(name, newId));
+
+        // Then
+        Assert.assertNotNull(result);
     }
 
 }
