@@ -25,7 +25,7 @@ public class MemberControllerTest {
     public void testAddMemberValid() {
      //   assert(true == true);
         // Given
-        String name = "Andrei";
+        String name = "Andra";
 
         // When
         String result = controller.addMember(new Member(name, id));

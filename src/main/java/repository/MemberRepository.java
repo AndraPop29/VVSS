@@ -44,7 +44,11 @@ public class MemberRepository {
 		}
 		if (checkIfExists(m.getId())) {
 			throw new MemberAlreadyExistsException();
-		} else {
+		}
+		if (m.getId() < 0 || m.getId() > 500) {
+			throw new Exception("Invalid id");
+		}
+		else {
 			members.add(m);
 		}
 	}

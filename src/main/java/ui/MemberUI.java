@@ -74,8 +74,6 @@ public class MemberUI {
 						entryController.addEntry(e);
 					} catch (NumberFormatException exception) {
 						System.out.println("Wrong id for member!");
-					} catch (MemberDoesNotExistException e1) {
-						System.out.println(e1.getLocalizedMessage());
 					}
 
 				} catch (NumberFormatException exception) {

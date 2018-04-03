@@ -17,12 +17,13 @@ public class EntryController {
 		this.memberRepository = memberRepository;
 	}
 
-	public void addEntry(Entry oneEntry) throws MemberDoesNotExistException {
-		if (memberRepository.checkIfExists(oneEntry.getIdMember())) {
-			this.entryRepository.addEntry(oneEntry);
-		} else {
-			throw new MemberDoesNotExistException();
-		}
+	public String addEntry(Entry oneEntry) {
+			if (memberRepository.checkIfExists(oneEntry.getIdMember())) {
+				this.entryRepository.addEntry(oneEntry);
+				return null;
+			} else {
+				return "Member does not exist";
+			}
 	}
 
 	public List<Entry> allEntries() {
