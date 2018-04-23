@@ -4,9 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import model.Entry;
+import model.Member;
 
 public class EntryRepository {
 
@@ -25,11 +27,14 @@ public class EntryRepository {
 		this.fileName = fileName;
 		readFromFile();
 	}
+	public boolean checkIfExists(int idOfEntry) {
+		Optional<Entry> tempMember = entries.stream().filter(m -> m.getId() == idOfEntry).findFirst();
+		return tempMember.isPresent();
+	}
 
 	public List<Entry> findByIdMember(int idMember) {
 		return entries.stream().filter(m -> m.getIdMember() == idMember).collect(Collectors.toList());
 	}
-	
 	@SuppressWarnings("resource")
 	private void readFromFile() {
 		try {

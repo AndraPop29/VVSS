@@ -34,7 +34,6 @@ public class EntryControllerTest {
 
     }
 
-
     @Test
     public void testAddInvalidMemberIdEntry() {
         String type = "income";
@@ -45,4 +44,28 @@ public class EntryControllerTest {
         Assert.assertNotNull(result);
 
     }
+
+    @Test
+    public void testAddInvalidEntryType() {
+        String type = "ana";
+        int value = 50;
+        int memberId = 1; // does not exist
+
+        String result = controller.addEntry(new Entry(id, type, value, memberId));
+        Assert.assertNotNull(result);
+
+    }
+
+    @Test
+    public void testAddInvalidEntryId() {
+        String type = "cost";
+        int value = 50;
+        int memberId = 1; // does not exist
+
+        String result = controller.addEntry(new Entry(1, type, value, memberId));
+        Assert.assertNotNull(result);
+
+    }
+
+
 }

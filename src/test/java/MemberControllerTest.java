@@ -75,5 +75,31 @@ public class MemberControllerTest {
         Assert.assertNotNull(controller.addMember(new Member(name, id)));
     }
 
+    @Test
+    public void testAddMemberIdTooLarge() {
+        // Given
+        String name = "Ana";
+        int newId = 512;
+
+        // When
+        String result = controller.addMember(new Member(name, newId));
+
+        // Then
+        Assert.assertNotNull(result);
+    }
+
+    @Test
+    public void testAddMemberIdBelowZero() {
+        // Given
+        String name = "Ana";
+        int newId = -1;
+
+        // When
+        String result = controller.addMember(new Member(name, newId));
+
+        // Then
+        Assert.assertNotNull(result);
+    }
+
 
 }
