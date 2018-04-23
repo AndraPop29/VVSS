@@ -18,19 +18,26 @@ public class EntryController {
     }
 
     public String addEntry(Entry oneEntry) {
-        if (memberRepository.checkIfExists(oneEntry.getIdMember())) {
-            if (oneEntry.getType().equals("cost") || oneEntry.getType().equals("income")) {
-                if (!entryRepository.checkIfExists(oneEntry.getId())) {
-                    this.entryRepository.addEntry(oneEntry);
-                    return null;
-                }
-                else return "Entry with id already exists";
-            }
-            else return "Entry type is not valid";
+        if (oneEntry.getId() <= 500) {
+            if (oneEntry.getId() > 0) {
+                if (memberRepository.checkIfExists(oneEntry.getIdMember())) {
+                    if (oneEntry.getType().equals("cost") || oneEntry.getType().equals("income")) {
+                        if (!entryRepository.checkIfExists(oneEntry.getId())) {
+                            this.entryRepository.addEntry(oneEntry);
+                            return null;
+                        } else return "Entry with id already exists";
+                    } else return "Entry type is not valid";
 
+                } else {
+                    return "Member does not exist";
+                }
+            } else {
+                return "Id too small";
+            }
         } else {
-            return "Member does not exist";
+            return "Id too large";
         }
+
     }
 
     public List<Entry> allEntries() {

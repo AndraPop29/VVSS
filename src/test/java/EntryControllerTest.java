@@ -29,7 +29,7 @@ public class EntryControllerTest {
         int value = 100;
         int memberId = 1;
 
-        String result = controller.addEntry(new Entry(id, type, value, memberId));
+        String result = controller.addEntry(new Entry(22, type, value, memberId));
         Assert.assertNull(result);
 
     }
@@ -49,7 +49,7 @@ public class EntryControllerTest {
     public void testAddInvalidEntryType() {
         String type = "ana";
         int value = 50;
-        int memberId = 1; // does not exist
+        int memberId = 1;
 
         String result = controller.addEntry(new Entry(id, type, value, memberId));
         Assert.assertNotNull(result);
@@ -60,9 +60,31 @@ public class EntryControllerTest {
     public void testAddInvalidEntryId() {
         String type = "cost";
         int value = 50;
-        int memberId = 1; // does not exist
+        int memberId = 1;
 
         String result = controller.addEntry(new Entry(1, type, value, memberId));
+        Assert.assertNotNull(result);
+
+    }
+
+    @Test
+    public void testAddIdTooLarge() {
+        String type = "cost";
+        int value = 50;
+        int memberId = 1;
+
+        String result = controller.addEntry(new Entry(10000, type, value, memberId));
+        Assert.assertNotNull(result);
+
+    }
+
+    @Test
+    public void testAddIdTooSmall() {
+        String type = "cost";
+        int value = 50;
+        int memberId = 1;
+
+        String result = controller.addEntry(new Entry(-2, type, value, memberId));
         Assert.assertNotNull(result);
 
     }
