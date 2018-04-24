@@ -1,5 +1,7 @@
 import controller.EntryController;
+import controller.MemberController;
 import model.Entry;
+import model.Member;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,6 +28,7 @@ public class EntryControllerTest {
     @Test
     public void testAddValidEntry() {
         String type = "cost";
+
         int value = 100;
         int memberId = 1;
 
