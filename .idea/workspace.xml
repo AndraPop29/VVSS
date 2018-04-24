@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f3d17fd-fe31-4032-b6da-5be72eb6ac0d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/EntryControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/EntryControllerTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/IntegrationTests.java" afterPath="$PROJECT_DIR$/src/test/java/IntegrationTests.java" />
-    </list>
+    <list default="true" id="8f3d17fd-fe31-4032-b6da-5be72eb6ac0d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -85,8 +82,8 @@
       <file leaf-file-name="IntegrationTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/IntegrationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="58" column="61" lean-forward="false" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="61" />
+            <state relative-caret-position="343">
+              <caret line="52" column="71" lean-forward="true" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -532,7 +529,7 @@
       <workItem from="1524550467901" duration="678000" />
       <workItem from="1524551950191" duration="330000" />
       <workItem from="1524565484090" duration="10000" />
-      <workItem from="1524576938191" duration="2477000" />
+      <workItem from="1524576938191" duration="2910000" />
     </task>
     <servers />
   </component>
@@ -569,7 +566,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19609000" />
+    <option name="totallyTimeSpent" value="20042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1107,8 +1104,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/IntegrationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="58" column="61" lean-forward="false" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="61" />
+        <state relative-caret-position="343">
+          <caret line="52" column="71" lean-forward="true" selection-start-line="52" selection-start-column="71" selection-end-line="52" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
