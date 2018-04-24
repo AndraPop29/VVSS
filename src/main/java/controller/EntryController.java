@@ -1,3 +1,4 @@
+
 package controller;
 
 import java.util.List;
@@ -6,6 +7,7 @@ import exceptions.MemberDoesNotExistException;
 import model.Entry;
 import repository.EntryRepository;
 import repository.MemberRepository;
+
 
 public class EntryController {
 
@@ -44,11 +46,11 @@ public class EntryController {
         return this.entryRepository.getAllEntries();
     }
 
-    public List<Entry> getEntriesFor(int idMember) throws MemberDoesNotExistException {
+    public List<Entry> getEntriesFor(int idMember){
         if (memberRepository.checkIfExists(idMember)) {
             return entryRepository.findByIdMember(idMember);
         } else {
-            throw new MemberDoesNotExistException();
+            return null;
         }
     }
 

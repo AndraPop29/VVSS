@@ -94,8 +94,6 @@ public class MemberUI {
 					}
 				} catch (NumberFormatException exception) {
 					System.out.println("Wrong id for member!");
-				} catch (MemberDoesNotExistException e) {
-					System.out.println(e.getLocalizedMessage());
 				}
 
 			} else if (cmd.equals("0")) {
