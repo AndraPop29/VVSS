@@ -117,7 +117,7 @@ public class IntegrationTest {
     }
 
     @Test
-    public void BigBangAllValid() { // valid member, valid entry
+    public void testBigBangAllValid() { // valid member, valid entry
         testAddMemberValid();
         testAddValidEntry();
         testGetEntriesForValidId();
