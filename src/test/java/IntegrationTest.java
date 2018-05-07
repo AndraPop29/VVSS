@@ -124,14 +124,14 @@ public class IntegrationTest {
     }
 
     @Test
-    public void BigBangInvalidMemberId()  { // invalid member, valid entry
+    public void BigBangInvalidA()  { // invalid member, valid entry
         testAddMemberInvalidId();
         testAddValidEntry();
         testGetEntriesForValidId();
     }
 
     @Test
-    public void BigBangInvalidEntry()  { // valid member, invalid entry
+    public void BigBangInvalidB()  { // valid member, invalid entry
         testAddMemberValid();
         testAddInvalidEntryType();
         testGetEntriesForValidId();
