@@ -11,7 +11,7 @@ import repository.MemberRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IntegrationTests {
+public class IntegrationTest {
     private EntryRepository entryRepo;
     private MemberRepository memberRepo;
     private EntryController entryController;
