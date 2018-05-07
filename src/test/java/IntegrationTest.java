@@ -32,37 +32,115 @@ public class IntegrationTest {
         Assert.assertNotNull(entries);
     }
 
+//    @Test
+//    public void testGetEntriesForInvalidEntryTypeAddedBigBang() {
+//        String name = "Andra";
+//        memberController.addMember(new Member(name, 15));
+//        String type = "c";
+//        int value = 100;
+//        int memberId = 15;
+//        entryController.addEntry(new Entry(22, type, value, memberId));
+//        Assert.assertEquals(new ArrayList<>(), entryController.getEntriesFor(memberId));
+//    }
+
     @Test
-    public void testGetEntriesForValidIdBigBang() {
-        String name = "Andra";
-        memberController.addMember(new Member(name, 15));
+    public void testAddValidEntry() {
         String type = "cost";
+
         int value = 100;
-        int memberId = 15;
-        entryController.addEntry(new Entry(22, type, value, memberId));
-        Assert.assertNotNull(entryController.getEntriesFor(memberId));
+        int memberId = 1;
+
+        String result = entryController.addEntry(new Entry(22, type, value, memberId));
+        Assert.assertNull(result);
+
     }
 
     @Test
-    public void testGetEntriesForInvalidIdBigBang() {
-        String name = "Andra";
-        memberController.addMember(new Member(name, 15));
-        String type = "cost";
-        int value = 100;
-        int memberId = 100;
-        entryController.addEntry(new Entry(22, type, value, memberId));
-        Assert.assertNull(entryController.getEntriesFor(memberId));
+    public void testAddInvalidEntryType() {
+        String type = "ana";
+        int value = 50;
+        int memberId = 1;
+
+        String result = entryController.addEntry(new Entry(101, type, value, memberId));
+        Assert.assertNotNull(result);
 
     }
 
     @Test
-    public void testGetEntriesForInvalidEntryTypeAddedBigBang() {
+    public void testAddInvalidEntryId() {
+        String type = "cost";
+        int value = 50;
+        int memberId = 1;
+
+        String result = entryController.addEntry(new Entry(1, type, value, memberId));
+        Assert.assertNotNull(result);
+
+    }
+
+
+    @Test
+    public void testAddMemberValid() {
+        //   assert(true == true);
+        // Given
         String name = "Andra";
-        memberController.addMember(new Member(name, 15));
-        String type = "c";
-        int value = 100;
-        int memberId = 15;
-        entryController.addEntry(new Entry(22, type, value, memberId));
-        Assert.assertEquals(new ArrayList<>(), entryController.getEntriesFor(memberId));
+
+        // When
+        String result = memberController.addMember(new Member(name, 15));
+
+        // Then
+        Assert.assertNull(result);
+    }
+
+    @Test
+    public void testAddMemberInvalidId() {
+        // Given
+        String name = "Ana";
+        int newId = 1;
+
+        // When
+        String result = memberController.addMember(new Member(name, newId));
+
+        // Then
+        Assert.assertNotNull(result);
+    }
+
+    @Test
+    public void testAddMemberInvalidName() {
+        // Given
+        String name = "An4";
+
+        // When
+        String result = memberController.addMember(new Member(name, 102));
+
+        // Then
+        Assert.assertNotNull(result);
+    }
+
+    @Test
+    public void BigBangAllValid() { // valid member, valid entry
+        testAddMemberValid();
+        testAddValidEntry();
+        testGetEntriesForValidId();
+    }
+
+    @Test
+    public void BigBangInvalidMemberId()  { // invalid member, valid entry
+        testAddMemberInvalidId();
+        testAddValidEntry();
+        testGetEntriesForValidId();
+    }
+
+    @Test
+    public void BigBangInvalidEntry()  { // valid member, invalid entry
+        testAddMemberValid();
+        testAddInvalidEntryType();
+        testGetEntriesForValidId();
+    }
+
+    @Test
+    public void BigBangInvalidMemberAndEntry()  { // invalid member, invalid entry
+        testAddMemberInvalidName();
+        testAddInvalidEntryType();
+        testGetEntriesForValidId();
     }
 }
