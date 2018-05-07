@@ -143,4 +143,18 @@ public class IntegrationTest {
         testAddInvalidEntryType();
         testGetEntriesForValidId();
     }
+
+    // INCREMENTAL INTEGRATION
+
+    @Test
+    public void IncrementalTestAB () {
+        testAddMemberValid();
+        testAddValidEntry();
+    }
+
+    @Test
+    public void IncrementalTestABC () {
+        IncrementalTestAB();
+        testGetEntriesForValidId();
+    }
 }
